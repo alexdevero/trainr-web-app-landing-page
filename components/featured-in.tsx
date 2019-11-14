@@ -1,9 +1,7 @@
 import * as React from 'react'
 
-const FeaturedIn = () => {
-  return (
-    <div></div>
-  )
-}
+const FeaturedIn = () => (
+  <section></section>
+)
 
 export default FeaturedIn
