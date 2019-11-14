@@ -15,12 +15,13 @@ const Pricing = () => (
             <div className="pricing-card__body">
               <h2>Starter Plan</h2>
 
-              <p></p>
+              <p>Best fit people just starting with training.</p>
 
               <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>Body measurements tracking</li>
+                <li>Caloric intake tracking</li>
+                <li>Water intake tracking</li>
+                <li>Workout tracking</li>
               </ul>
             </div>
 
@@ -39,12 +40,15 @@ const Pricing = () => (
             <div className="pricing-card__body">
               <h2>Intermediate Plan</h2>
 
-              <p></p>
+              <p>Best fit people serious about their fitness goals.</p>
 
               <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>Body measurements tracking</li>
+                <li>Caloric intake tracking</li>
+                <li>Water intake tracking</li>
+                <li>Workout tracking</li>
+                <li>Exercise library</li>
+                <li>Workout library</li>
               </ul>
             </div>
 
@@ -63,12 +67,16 @@ const Pricing = () => (
             <div className="pricing-card__body">
               <h2>Athlete Plan</h2>
 
-              <p></p>
+              <p>Best for fitness enthusiast who want to take their fitness to the next level.</p>
 
               <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>Body measurements tracking</li>
+                <li>Caloric intake tracking</li>
+                <li>Workout tracking</li>
+                <li>Water intake tracking</li>
+                <li>Exercise library</li>
+                <li>Workout library</li>
+                <li>Supplement tracking</li>
               </ul>
             </div>
 
@@ -85,19 +93,24 @@ const Pricing = () => (
             </div>
 
             <div className="pricing-card__body">
-              <h2>Trainer Plan</h2>
+              <h2>Coach Plan</h2>
 
-              <p></p>
+              <p>Best for coaches who want to register and work with trainees.</p>
 
               <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>Body measurements tracking</li>
+                <li>Caloric intake tracking</li>
+                <li>Workout tracking</li>
+                <li>Water intake tracking</li>
+                <li>Exercise library</li>
+                <li>Workout library</li>
+                <li>Supplement tracking</li>
+                <li>Manage trainees</li>
               </ul>
             </div>
 
             <div className="pricing-card__footer">
-              <button>Start with Trainer</button>
+              <button>Start with Coach</button>
             </div>
           </div>
         </div>
