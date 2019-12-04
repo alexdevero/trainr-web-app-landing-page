@@ -103,6 +103,7 @@ const Home = () => (
       .container {
         padding-right: 15px;
         padding-left: 15px;
+        margin-top: 69px; /* height of fixed header */
         margin-right: auto;
         margin-left: auto;
         max-width: 1140px;
