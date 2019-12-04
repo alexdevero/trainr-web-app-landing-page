@@ -14,7 +14,7 @@ import SignUp from '../components/sign-up'
 import Testimonials from '../components/testimonials'
 
 const Home = () => (
-  <div>
+  <div className="container">
     <Head>
       <title>Trainr | Home</title>
 
@@ -40,6 +40,18 @@ const Home = () => (
     <SignUp />
 
     <Footer />
+
+    <style jsx>{`
+      :global(body) {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Helvetica, sans-serif;
+      }
+
+      .container {
+        margin: auto;
+        max-width: 1140px;
+      }
+    `}</style>
   </div>
 )
 
