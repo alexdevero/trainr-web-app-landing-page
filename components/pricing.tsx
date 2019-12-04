@@ -9,7 +9,7 @@ const Pricing = () => (
         <div className="col-3">
           <div className="pricing-card">
             <div className="pricing-card__header">
-              <h2>&doll;19<span className="price-label">per month</span></h2>
+              <h2>$19<span className="price-label">per month</span></h2>
             </div>
 
             <div className="pricing-card__body">
@@ -34,7 +34,7 @@ const Pricing = () => (
         <div className="col-3">
           <div className="pricing-card">
             <div className="pricing-card__header">
-              <h2>&doll;29<span className="price-label">per month</span></h2>
+              <h2>$29<span className="price-label">per month</span></h2>
             </div>
 
             <div className="pricing-card__body">
@@ -61,7 +61,7 @@ const Pricing = () => (
         <div className="col-3">
           <div className="pricing-card">
             <div className="pricing-card__header">
-              <h2>&doll;79<span className="price-label">per month</span></h2>
+              <h2>$79<span className="price-label">per month</span></h2>
             </div>
 
             <div className="pricing-card__body">
@@ -89,7 +89,7 @@ const Pricing = () => (
         <div className="col-3">
           <div className="pricing-card">
             <div className="pricing-card__header">
-              <h2>&doll;99<span className="price-label">per month</span></h2>
+              <h2>$99<span className="price-label">per month</span></h2>
             </div>
 
             <div className="pricing-card__body">
