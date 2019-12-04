@@ -2,8 +2,12 @@ import React from 'react'
 import Link from 'next/link'
 
 const links = [
-  { href: 'https://zeit.co/now', label: 'ZEIT', key: '' },
-  { href: 'https://github.com/zeit/next.js', label: 'GitHub', key: '' }
+  { href: '#benefits', label: 'Benefits', key: '' },
+  { href: '#how-it-works', label: 'How it works', key: '' },
+  { href: '#faqs', label: 'FAQs', key: '' },
+  { href: '#pricing', label: 'Pricing', key: '' },
+  { href: '#testimonials', label: 'Testimonials', key: '' },
+  { href: '#sign-up', label: 'Sign in', key: '' },
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`
   return link
@@ -18,6 +22,7 @@ const Nav = () => (
             <a>Home</a>
           </Link>
         </li>
+
         {links.map(({ key, href, label }) => (
           <li key={key}>
             <a href={href}>{label}</a>
@@ -28,8 +33,7 @@ const Nav = () => (
       <style jsx>{`
         :global(body) {
           margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
-            Helvetica, sans-serif;
+          font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Helvetica, sans-serif;
         }
         nav {
           text-align: center;
