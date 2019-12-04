@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 const links = [
   { href: '#benefits', label: 'Benefits', key: '' },
-  { href: '#how-it-works', label: 'How it works', key: '' },
-  { href: '#faqs', label: 'FAQs', key: '' },
+  { href: '#howItWorks', label: 'How it works', key: '' },
+  { href: '#faq', label: 'FAQ', key: '' },
   { href: '#pricing', label: 'Pricing', key: '' },
   { href: '#testimonials', label: 'Testimonials', key: '' },
-  { href: '#sign-up', label: 'Sign in', key: '' },
+  { href: '#signUp', label: 'Sign up', key: '' },
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`
   return link
