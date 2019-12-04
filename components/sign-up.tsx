@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 const SignUp = () => (
-  <section></section>
+  <section id="signUp"></section>
 )
 
 export default SignUp

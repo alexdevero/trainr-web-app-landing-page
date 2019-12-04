@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 const Benefits = () => (
-  <section></section>
+  <section id="benefits"></section>
 )
 
 export default Benefits

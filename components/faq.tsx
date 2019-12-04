@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 const Faq = () => (
-  <section>
+  <section id="faq">
     <div className="container">
       <h1>FAQ</h1>
 

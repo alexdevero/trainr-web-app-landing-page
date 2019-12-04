@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 const HowItWorks = () => (
-  <section>
+  <section id="howItWorks">
     <div className="container">
       <h1>How it Works</h1>
 

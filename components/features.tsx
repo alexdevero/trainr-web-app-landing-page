@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 const Features = () => (
-  <section>
+  <section id="features">
     <div className="container">
       <h1>Features/Benefits List</h1>
 

@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 const Testimonials = () => (
-  <section></section>
+  <section id="testimonials"></section>
 )
 
 export default Testimonials
