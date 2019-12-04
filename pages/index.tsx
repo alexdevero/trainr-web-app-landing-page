@@ -82,14 +82,29 @@ const Home = () => (
 
     <Footer />
 
-    <style jsx>{`
-      :global(body) {
+    <style jsx global>{`
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+
+      body {
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Helvetica, sans-serif;
       }
+    `}</style>
 
+    <style jsx>{`
       .container {
-        margin: auto;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
         max-width: 1140px;
       }
     `}</style>
