@@ -5,6 +5,7 @@ interface PricingInterface {
   setIsBillingMonthly: React.Dispatch<React.SetStateAction<boolean>>;
   isModalVisible: boolean;
   setIsModalVisible: React.Dispatch<React.SetStateAction<boolean>>;
+  handlePlanSelect: (pricingPlan: 'starter' | 'athlete' | 'beast' | 'coach') => void;
 }
 
 const Pricing = (props: PricingInterface) => {
@@ -37,7 +38,7 @@ const Pricing = (props: PricingInterface) => {
               </div>
 
               <div className="pricing-card__footer">
-                <button>Start with Starter</button>
+                <button onClick={() => props.handlePlanSelect('starter')}>Start with Starter</button>
               </div>
             </div>
           </div>
@@ -65,7 +66,7 @@ const Pricing = (props: PricingInterface) => {
               </div>
 
               <div className="pricing-card__footer">
-                <button>Start with Athlete</button>
+                <button onClick={() => props.handlePlanSelect('athlete')}>Start with Athlete</button>
               </div>
             </div>
           </div>
@@ -95,7 +96,7 @@ const Pricing = (props: PricingInterface) => {
               </div>
 
               <div className="pricing-card__footer">
-                <button>Start with Beast</button>
+                <button onClick={() => props.handlePlanSelect('beast')}>Start with Beast</button>
               </div>
             </div>
           </div>
@@ -126,7 +127,7 @@ const Pricing = (props: PricingInterface) => {
               </div>
 
               <div className="pricing-card__footer">
-                <button>Start with Coach</button>
+                <button onClick={() => props.handlePlanSelect('coach')}>Start with Coach</button>
               </div>
             </div>
           </div>

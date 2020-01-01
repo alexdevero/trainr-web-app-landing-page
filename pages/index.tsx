@@ -16,6 +16,11 @@ import Testimonials from '../components/testimonials'
 const Home = () => {
   const [isBillingMonthly, setIsBillingMonthly] = React.useState(true)
   const [isModalVisible, setIsModalVisible] = React.useState(false)
+  const [selectedPlan, setSelectedPlan] = React.useState('')
+
+  const handlePlanSelect = (pricingPlan: 'starter' | 'athlete' | 'beast' | 'coach') => {
+    console.log(pricingPlan)
+  }
 
   return (
     <div className="page">
@@ -81,6 +86,7 @@ const Home = () => {
         setIsBillingMonthly={setIsBillingMonthly}
         isModalVisible={isModalVisible}
         setIsModalVisible={setIsModalVisible}
+        handlePlanSelect={handlePlanSelect}
       />
 
       <Testimonials />
