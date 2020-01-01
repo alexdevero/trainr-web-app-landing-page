@@ -14,7 +14,7 @@ import SignUp from '../components/sign-up'
 import Testimonials from '../components/testimonials'
 
 const Home = () => (
-  <div className="container">
+  <div className="page">
     <Head>
       <title>Trainr | Home</title>
 
@@ -96,17 +96,6 @@ const Home = () => (
       body {
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Helvetica, sans-serif;
-      }
-    `}</style>
-
-    <style jsx>{`
-      .container {
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-top: 69px; /* height of fixed header */
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 1140px;
       }
     `}</style>
   </div>
