@@ -15,30 +15,41 @@ const links = [
 
 const Nav = () => (
   <header>
-    <nav>
-      <ul>
-        <li>
-          <Link href='/'>
-            <a>Home</a>
-          </Link>
-        </li>
-
-        {links.map(({ key, href, label }) => (
-          <li key={key}>
-            <a href={href}>{label}</a>
+    <div className="container">
+      <nav>
+        <ul>
+          <li>
+            <Link href='/'>
+              <a>Home</a>
+            </Link>
           </li>
-        ))}
-      </ul>
-    </nav>
+
+          {links.map(({ key, href, label }) => (
+            <li key={key}>
+              <a href={href}>{label}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
 
     <style jsx>{`
       header {
         position: fixed;
         top: 0;
         left: 0;
+        z-index: 99;
         width: 100%;
         background: #fff;
         box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.1);
+      }
+
+      .container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1140px;
       }
 
       nav {
