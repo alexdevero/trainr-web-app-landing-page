@@ -1,166 +1,187 @@
 import * as React from 'react'
 
-const Pricing = () => (
-  <section id="pricing">
-    <div className="container">
-      <h1>Pricing</h1>
+const Pricing = () => {
+  const [billingMonthly, setBillingMonthly] = React.useState(true)
+  return (
+    <section id="pricing">
+      <div className="container">
+        <h1>Pricing</h1>
 
-      <div className="row">
-        <div className="col">
-          <div className="pricing-card">
-            <div className="pricing-card__header">
-              <h2>$19<span className="price-label">per month</span></h2>
-            </div>
+        <div className="billing-switch">switch to <button className="billing-switch-link" onClick={() => setBillingMonthly(!billingMonthly)}>{billingMonthly ? 'yearly' : 'monthly'}</button></div>
 
-            <div className="pricing-card__body">
-              <h2>Starter</h2>
+        <div className="row">
+          <div className="col">
+            <div className="pricing-card">
+              <div className="pricing-card__header">
+                <h2>{billingMonthly ? '$19' : '$16'}<span className="price-label">/{billingMonthly ? 'month' : 'year'}</span></h2>
+              </div>
 
-              <p>You are new to CrossFit training.</p>
+              <div className="pricing-card__body">
+                <h2>Starter</h2>
 
-              <ul>
-                <li>Body measurements tracking</li>
-                {/* <li>Caloric intake tracking</li> */}
-                {/* <li>Water intake tracking</li> */}
-                <li>Workout tracking</li>
-                <li>Daily WODs</li>
-              </ul>
-            </div>
+                <p>You are new to CrossFit training.</p>
 
-            <div className="pricing-card__footer">
-              <button>Start with Starter</button>
-            </div>
-          </div>
-        </div>
+                <ul>
+                  <li>Body measurements tracking</li>
+                  {/* <li>Caloric intake tracking</li> */}
+                  {/* <li>Water intake tracking</li> */}
+                  <li>Workout tracking</li>
+                  <li>Daily WODs</li>
+                </ul>
+              </div>
 
-        <div className="col">
-          <div className="pricing-card">
-            <div className="pricing-card__header">
-              <h2>$29<span className="price-label">per month</span></h2>
-            </div>
-
-            <div className="pricing-card__body">
-              <h2>Athlete</h2>
-
-              <p>You are ready to take your game to the next level.</p>
-
-              <ul>
-                <li>Body measurements tracking</li>
-                <li>Caloric intake tracking</li>
-                <li>Water intake tracking</li>
-                <li>Workout tracking</li>
-                <li>Daily WODs</li>
-                {/* <li>Exercise library</li> */}
-                <li>Workouts library</li>
-              </ul>
-            </div>
-
-            <div className="pricing-card__footer">
-              <button>Start with Athlete</button>
+              <div className="pricing-card__footer">
+                <button>Start with Starter</button>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="col">
-          <div className="pricing-card">
-            <div className="pricing-card__header">
-              <h2>$79<span className="price-label">per month</span></h2>
-            </div>
+          <div className="col">
+            <div className="pricing-card">
+              <div className="pricing-card__header">
+                <h2>{billingMonthly ? '$29' : '$24'}<span className="price-label">/{billingMonthly ? 'month' : 'year'}</span></h2>
+              </div>
 
-            <div className="pricing-card__body">
-              <h2>Beast</h2>
+              <div className="pricing-card__body">
+                <h2>Athlete</h2>
 
-              <p>You are at the top. You do The Seven, Murph, Fran and Filthy 50 as a warmup.</p>
+                <p>You are ready to take your game to the next level.</p>
 
-              <ul>
-                <li>Body measurements tracking</li>
-                <li>Caloric intake tracking</li>
-                <li>Workout tracking</li>
-                <li>Water intake tracking</li>
-                <li>Daily WODs</li>
-                <li>Exercise library</li>
-                <li>Workouts library</li>
-                <li>Custom workouts library</li>
-                <li>Supplement tracking</li>
-              </ul>
-            </div>
+                <ul>
+                  <li>Body measurements tracking</li>
+                  <li>Caloric intake tracking</li>
+                  <li>Water intake tracking</li>
+                  <li>Workout tracking</li>
+                  <li>Daily WODs</li>
+                  {/* <li>Exercise library</li> */}
+                  <li>Workouts library</li>
+                </ul>
+              </div>
 
-            <div className="pricing-card__footer">
-              <button>Start with Beast</button>
+              <div className="pricing-card__footer">
+                <button>Start with Athlete</button>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="col">
-          <div className="pricing-card">
-            <div className="pricing-card__header">
-              <h2>$99<span className="price-label">per month</span></h2>
+          <div className="col">
+            <div className="pricing-card">
+              <div className="pricing-card__header">
+                <h2>{billingMonthly ? '$79' : '$69'}<span className="price-label">/{billingMonthly ? 'month' : 'year'}</span></h2>
+              </div>
+
+              <div className="pricing-card__body">
+                <h2>Beast</h2>
+
+                <p>You are at the top. You do The Seven, Murph, Fran and Filthy 50 as a warmup.</p>
+
+                <ul>
+                  <li>Body measurements tracking</li>
+                  <li>Caloric intake tracking</li>
+                  <li>Workout tracking</li>
+                  <li>Water intake tracking</li>
+                  <li>Daily WODs</li>
+                  <li>Exercise library</li>
+                  <li>Workouts library</li>
+                  <li>Custom workouts library</li>
+                  <li>Supplement tracking</li>
+                </ul>
+              </div>
+
+              <div className="pricing-card__footer">
+                <button>Start with Beast</button>
+              </div>
             </div>
+          </div>
 
-            <div className="pricing-card__body">
-              <h2>Box</h2>
+          <div className="col">
+            <div className="pricing-card">
+              <div className="pricing-card__header">
+                <h2>{billingMonthly ? '$99' : '$84'}<span className="price-label">/{billingMonthly ? 'month' : 'year'}</span></h2>
+              </div>
 
-              <p>Best for coaches who want to register and work with trainees.</p>
+              <div className="pricing-card__body">
+                <h2>Box</h2>
 
-              <ul>
-                <li>Body measurements tracking</li>
-                <li>Caloric intake tracking</li>
-                <li>Workout tracking</li>
-                <li>Water intake tracking</li>
-                <li>Daily WODs</li>
-                <li>Exercise library</li>
-                <li>Workouts library</li>
-                <li>Custom workouts library</li>
-                <li>Supplement tracking</li>
-                <li>Register and manage trainees</li>
-              </ul>
-            </div>
+                <p>Best for coaches who want to register and work with trainees.</p>
 
-            <div className="pricing-card__footer">
-              <button>Start with Coach</button>
+                <ul>
+                  <li>Body measurements tracking</li>
+                  <li>Caloric intake tracking</li>
+                  <li>Workout tracking</li>
+                  <li>Water intake tracking</li>
+                  <li>Daily WODs</li>
+                  <li>Exercise library</li>
+                  <li>Workouts library</li>
+                  <li>Custom workouts library</li>
+                  <li>Supplement tracking</li>
+                  <li>Register and manage trainees</li>
+                </ul>
+              </div>
+
+              <div className="pricing-card__footer">
+                <button>Start with Coach</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <style jsx>{`
-      .container {
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 1140px;
-      }
-
-      .row {
-        display: flex;
-        flex-wrap: wrap;
-        margin-right: -15px;
-        margin-left: -15px;
-      }
-
-      .col {
-        position: relative;
-        padding-right: 15px;
-        padding-left: 15px;
-        width: 100%;
-      }
-
-      @media (min-width: 768px) {
-        .col {
-          flex: 0 0 50%;
-          max-width: 50%;
+      <style jsx>{`
+        .container {
+          padding-right: 15px;
+          padding-left: 15px;
+          margin-right: auto;
+          margin-left: auto;
+          max-width: 1140px;
         }
-      }
 
-      @media (min-width: 992px) {
-        .col {
-          flex: 0 0 25%;
-          max-width: 25%;
+        .row {
+          display: flex;
+          flex-wrap: wrap;
+          margin-right: -15px;
+          margin-left: -15px;
         }
-      }
-    `}</style>
-  </section>
-)
+
+        .col {
+          position: relative;
+          padding-right: 15px;
+          padding-left: 15px;
+          width: 100%;
+        }
+
+        @media (min-width: 768px) {
+          .col {
+            flex: 0 0 50%;
+            max-width: 50%;
+          }
+        }
+
+        @media (min-width: 992px) {
+          .col {
+            flex: 0 0 25%;
+            max-width: 25%;
+          }
+        }
+
+        h1,
+        .billing-switch {
+          text-align: center;
+        }
+
+        .billing-switch-link {
+          padding: 0;
+          font-size: 16px;
+          text-decoration: underline;
+          color: #222;
+          background: transparent;
+          border: 0;
+          cursor: pointer;
+          outline: 0;
+        }
+      `}</style>
+    </section>
+  )
+}
 
 export default Pricing
