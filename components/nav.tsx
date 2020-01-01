@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const links = [
   { href: '#benefits', label: 'Benefits', key: '' },
@@ -18,15 +19,15 @@ const Nav = () => (
     <div className="container">
       <nav>
         <ul>
-          <li>
+          {/* <li>
             <Link href='/'>
               <a>Home</a>
             </Link>
-          </li>
+          </li> */}
 
           {links.map(({ key, href, label }) => (
             <li key={key}>
-              <a href={href}>{label}</a>
+              <AnchorLink style={{ textDecoration: 'none' }} href={href}><span>{label}</span></AnchorLink>
             </li>
           ))}
         </ul>
@@ -79,14 +80,13 @@ const Nav = () => (
         padding-right: 0;
       }
 
-      a {
+      li span {
         font-size: 15px;
-        text-decoration: none;
         color: #111;
         transition: .25s color ease-out;
       }
 
-      a:hover {
+      li span:hover {
         color: #067df7;
       }
     `}</style>
