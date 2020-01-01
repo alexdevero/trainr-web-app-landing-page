@@ -19,8 +19,8 @@ const Pricing = () => (
 
               <ul>
                 <li>Body measurements tracking</li>
-                <li>Caloric intake tracking</li>
-                <li>Water intake tracking</li>
+                {/* <li>Caloric intake tracking</li> */}
+                {/* <li>Water intake tracking</li> */}
                 <li>Workout tracking</li>
                 <li>Daily WODs</li>
               </ul>
@@ -49,7 +49,7 @@ const Pricing = () => (
                 <li>Water intake tracking</li>
                 <li>Workout tracking</li>
                 <li>Daily WODs</li>
-                <li>Exercise library</li>
+                {/* <li>Exercise library</li> */}
                 <li>Workouts library</li>
               </ul>
             </div>
@@ -79,6 +79,7 @@ const Pricing = () => (
                 <li>Daily WODs</li>
                 <li>Exercise library</li>
                 <li>Workouts library</li>
+                <li>Custom workouts library</li>
                 <li>Supplement tracking</li>
               </ul>
             </div>
