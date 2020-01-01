@@ -3,12 +3,12 @@ import Link from 'next/link'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const links = [
-  { href: '#benefits', label: 'Benefits', key: '' },
+  // { href: '#benefits', label: 'Benefits', key: '' },
   { href: '#howItWorks', label: 'How it works', key: '' },
   { href: '#faq', label: 'FAQ', key: '' },
   { href: '#pricing', label: 'Pricing', key: '' },
-  { href: '#testimonials', label: 'Testimonials', key: '' },
-  { href: '#signUp', label: 'Sign up', key: '' },
+  // { href: '#testimonials', label: 'Testimonials', key: '' },
+  // { href: '#signUp', label: 'Sign up', key: '' },
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`
   return link
@@ -30,6 +30,12 @@ const Nav = () => (
               <AnchorLink style={{ textDecoration: 'none' }} href={href}><span>{label}</span></AnchorLink>
             </li>
           ))}
+
+          <li>
+            <AnchorLink style={{ textDecoration: 'none' }} href='#pricing'>
+              <span>Get Started</span>
+            </AnchorLink>
+          </li>
         </ul>
       </nav>
     </div>
