@@ -109,6 +109,7 @@ const Pricing = () => (
                 <li>Daily WODs</li>
                 <li>Exercise library</li>
                 <li>Workouts library</li>
+                <li>Custom workouts library</li>
                 <li>Supplement tracking</li>
                 <li>Register and manage trainees</li>
               </ul>
