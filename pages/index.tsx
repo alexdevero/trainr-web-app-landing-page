@@ -16,10 +16,26 @@ import Testimonials from '../components/testimonials'
 const Home = () => {
   const [isBillingMonthly, setIsBillingMonthly] = React.useState(true)
   const [isModalVisible, setIsModalVisible] = React.useState(false)
+  const [isSignUpMessageSuccessVisible, setIsSignUpMessageSuccessVisible] = React.useState(false)
+  const [isSignUpMessageErrorVisible, setIsSignUpMessageErrorVisible] = React.useState(false)
   const [selectedPlan, setSelectedPlan] = React.useState('')
 
   const handlePlanSelect = (pricingPlan: 'starter' | 'athlete' | 'beast' | 'coach') => {
     console.log(pricingPlan)
+    setSelectedPlan(pricingPlan)
+    setIsModalVisible(true)
+  }
+
+  const handleSignUp = () => {
+    console.log('click')
+    setIsModalVisible(false)
+    if (false) {
+      setIsSignUpMessageSuccessVisible(true)
+      setIsSignUpMessageErrorVisible(false)
+    } else {
+      setIsSignUpMessageErrorVisible(true)
+      setIsSignUpMessageSuccessVisible(false)
+    }
   }
 
   return (
@@ -83,10 +99,14 @@ const Home = () => {
 
       <Pricing
         isBillingMonthly={isBillingMonthly}
-        setIsBillingMonthly={setIsBillingMonthly}
         isModalVisible={isModalVisible}
+        selectedPlan={selectedPlan}
+        setIsBillingMonthly={setIsBillingMonthly}
         setIsModalVisible={setIsModalVisible}
+        isSignUpMessageSuccessVisible={isSignUpMessageSuccessVisible}
+        isSignUpMessageErrorVisible={isSignUpMessageErrorVisible}
         handlePlanSelect={handlePlanSelect}
+        handleSignUp={handleSignUp}
       />
 
       <Testimonials />
