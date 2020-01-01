@@ -13,92 +13,102 @@ import Pricing from '../components/pricing'
 import SignUp from '../components/sign-up'
 import Testimonials from '../components/testimonials'
 
-const Home = () => (
-  <div className="page">
-    <Head>
-      <title>Trainr | Home</title>
+const Home = () => {
+  const [isBillingMonthly, setIsBillingMonthly] = React.useState(true)
+  const [isModalVisible, setIsModalVisible] = React.useState(false)
 
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="handheldFriendly" content="true" />
-      {/* Maximum length 155 characters */}
-      <meta name="description" content="" />
-      <meta name="subject" content="Trainr | Home" />
-      <meta name="language" content="English" />
-      <meta name="robots" content="index,follow" />
-      <meta name="googlebot" content="index,follow" />
-      <meta name="classification" content="business" />
-      <meta name="url" content="" />
+  return (
+    <div className="page">
+      <Head>
+        <title>Trainr | Home</title>
 
-      {/* Favicons */}
-      <link rel='icon' href='/favicon.ico' />
-      <link rel="apple-touch-icon" sizes="180x180" href="" />
-      <link rel="icon" type="image/png" href="" sizes="32x32" />
-      <link rel="icon" type="image/png" href="" sizes="16x16" />
-      <link rel="manifest" href="" />
-      <link rel="mask-icon" href="" color="#111" />
-      <link rel="shortcut icon" href="" />
-      <meta name="msapplication-config" content="" />
-      <meta name="theme-color" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="handheldFriendly" content="true" />
+        {/* Maximum length 155 characters */}
+        <meta name="description" content="" />
+        <meta name="subject" content="Trainr | Home" />
+        <meta name="language" content="English" />
+        <meta name="robots" content="index,follow" />
+        <meta name="googlebot" content="index,follow" />
+        <meta name="classification" content="business" />
+        <meta name="url" content="" />
 
-      {/* Facebook OpenGraph tags */}
-      <meta property="og:title" content="Trainr | Home" />
-      <meta property="og:type" content="" />
-      <meta property="og:description" content="" />
-      <meta property="og:image" content="" />
-      <meta property="og:url" content="" />
-      <meta property="og:locale" content="" />
-      <meta property="article:author" content="" />
+        {/* Favicons */}
+        <link rel='icon' href='/favicon.ico' />
+        <link rel="apple-touch-icon" sizes="180x180" href="" />
+        <link rel="icon" type="image/png" href="" sizes="32x32" />
+        <link rel="icon" type="image/png" href="" sizes="16x16" />
+        <link rel="manifest" href="" />
+        <link rel="mask-icon" href="" color="#111" />
+        <link rel="shortcut icon" href="" />
+        <meta name="msapplication-config" content="" />
+        <meta name="theme-color" content="" />
 
-      {/* Twitter cards tags */}
-      <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content="" />
-      <meta name="twitter:creator" content="@alexdevero" />
-      <meta name="twitter:url" content="" />
-      <meta name="twitter:title" content="Trainr | Home" />
-      <meta name="twitter:description" content="" />
-      <meta name="twitter:image" content="" />
+        {/* Facebook OpenGraph tags */}
+        <meta property="og:title" content="Trainr | Home" />
+        <meta property="og:type" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:locale" content="" />
+        <meta property="article:author" content="" />
 
-      {/* Disable automatic detection and formatting of possible phone numbers */}
-      <meta name="format-detection" content="telephone=no" />
-    </Head>
+        {/* Twitter cards tags */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="" />
+        <meta name="twitter:creator" content="@alexdevero" />
+        <meta name="twitter:url" content="" />
+        <meta name="twitter:title" content="Trainr | Home" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:image" content="" />
 
-    <Nav />
+        {/* Disable automatic detection and formatting of possible phone numbers */}
+        <meta name="format-detection" content="telephone=no" />
+      </Head>
 
-    <Hero />
+      <Nav />
 
-    <Benefits />
+      <Hero />
 
-    <HowItWorks />
+      <Benefits />
 
-    <Faq />
+      <HowItWorks />
 
-    <Pricing />
+      <Faq />
 
-    <Testimonials />
+      <Pricing
+        isBillingMonthly={isBillingMonthly}
+        setIsBillingMonthly={setIsBillingMonthly}
+        isModalVisible={isModalVisible}
+        setIsModalVisible={setIsModalVisible}
+      />
 
-    <FeaturedIn />
+      <Testimonials />
 
-    <SignUp />
+      <FeaturedIn />
 
-    <Footer />
+      <SignUp />
 
-    <style jsx global>{`
-      html {
-        box-sizing: border-box;
-      }
+      <Footer />
 
-      *,
-      *::before,
-      *::after {
-        box-sizing: inherit;
-      }
+      <style jsx global>{`
+        html {
+          box-sizing: border-box;
+        }
 
-      body {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Helvetica, sans-serif;
-      }
-    `}</style>
-  </div>
-)
+        *,
+        *::before,
+        *::after {
+          box-sizing: inherit;
+        }
+
+        body {
+          margin: 0;
+          font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Helvetica, sans-serif;
+        }
+      `}</style>
+    </div>
+  )
+}
 
 export default Home
