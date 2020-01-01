@@ -1,19 +1,25 @@
 import * as React from 'react'
 
-const Pricing = () => {
-  const [billingMonthly, setBillingMonthly] = React.useState(true)
+interface PricingInterface {
+  isBillingMonthly: boolean;
+  setIsBillingMonthly: React.Dispatch<React.SetStateAction<boolean>>;
+  isModalVisible: boolean;
+  setIsModalVisible: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Pricing = (props: PricingInterface) => {
   return (
     <section id="pricing">
       <div className="container">
         <h1>Pricing</h1>
 
-        <div className="billing-switch">switch to <button className="billing-switch-link" onClick={() => setBillingMonthly(!billingMonthly)}>{billingMonthly ? 'yearly' : 'monthly'}</button></div>
+        <div className="billing-switch">switch to <button className="billing-switch-link" onClick={() => props.setIsBillingMonthly(!props.isBillingMonthly)}>{props.isBillingMonthly ? 'yearly' : 'monthly'}</button></div>
 
         <div className="row">
           <div className="col">
             <div className="pricing-card">
               <div className="pricing-card__header">
-                <h2>{billingMonthly ? '$19' : '$16'}<span className="price-label">/{billingMonthly ? 'month' : 'year'}</span></h2>
+                <h2>{props.isBillingMonthly ? '$19' : '$16'}<span className="price-label">/{props.isBillingMonthly ? 'month' : 'year'}</span></h2>
               </div>
 
               <div className="pricing-card__body">
@@ -37,9 +43,9 @@ const Pricing = () => {
           </div>
 
           <div className="col">
-            <div className="pricing-card">
+            <div className="pricing-card pricing-card-selected">
               <div className="pricing-card__header">
-                <h2>{billingMonthly ? '$29' : '$24'}<span className="price-label">/{billingMonthly ? 'month' : 'year'}</span></h2>
+                <h2>{props.isBillingMonthly ? '$29' : '$24'}<span className="price-label">/{props.isBillingMonthly ? 'month' : 'year'}</span></h2>
               </div>
 
               <div className="pricing-card__body">
@@ -67,7 +73,7 @@ const Pricing = () => {
           <div className="col">
             <div className="pricing-card">
               <div className="pricing-card__header">
-                <h2>{billingMonthly ? '$79' : '$69'}<span className="price-label">/{billingMonthly ? 'month' : 'year'}</span></h2>
+                <h2>{props.isBillingMonthly ? '$79' : '$69'}<span className="price-label">/{props.isBillingMonthly ? 'month' : 'year'}</span></h2>
               </div>
 
               <div className="pricing-card__body">
@@ -97,7 +103,7 @@ const Pricing = () => {
           <div className="col">
             <div className="pricing-card">
               <div className="pricing-card__header">
-                <h2>{billingMonthly ? '$99' : '$84'}<span className="price-label">/{billingMonthly ? 'month' : 'year'}</span></h2>
+                <h2>{props.isBillingMonthly ? '$99' : '$84'}<span className="price-label">/{props.isBillingMonthly ? 'month' : 'year'}</span></h2>
               </div>
 
               <div className="pricing-card__body">
@@ -179,6 +185,10 @@ const Pricing = () => {
           cursor: pointer;
           outline: 0;
         }
+
+        .pricing-card {}
+
+        .pricing-card-selected {}
       `}</style>
     </section>
   )
