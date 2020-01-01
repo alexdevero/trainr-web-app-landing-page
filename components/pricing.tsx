@@ -13,15 +13,16 @@ const Pricing = () => (
             </div>
 
             <div className="pricing-card__body">
-              <h2>Starter Plan</h2>
+              <h2>Starter</h2>
 
-              <p>Best fit people just starting with training.</p>
+              <p>You are new to CrossFit training.</p>
 
               <ul>
                 <li>Body measurements tracking</li>
                 <li>Caloric intake tracking</li>
                 <li>Water intake tracking</li>
                 <li>Workout tracking</li>
+                <li>Daily WODs</li>
               </ul>
             </div>
 
@@ -38,45 +39,18 @@ const Pricing = () => (
             </div>
 
             <div className="pricing-card__body">
-              <h2>Intermediate Plan</h2>
+              <h2>Athlete</h2>
 
-              <p>Best fit people serious about their fitness goals.</p>
+              <p>You are ready to take your game to the next level.</p>
 
               <ul>
                 <li>Body measurements tracking</li>
                 <li>Caloric intake tracking</li>
                 <li>Water intake tracking</li>
                 <li>Workout tracking</li>
+                <li>Daily WODs</li>
                 <li>Exercise library</li>
-                <li>Workout library</li>
-              </ul>
-            </div>
-
-            <div className="pricing-card__footer">
-              <button>Start with Intermediate</button>
-            </div>
-          </div>
-        </div>
-
-        <div className="col">
-          <div className="pricing-card">
-            <div className="pricing-card__header">
-              <h2>$79<span className="price-label">per month</span></h2>
-            </div>
-
-            <div className="pricing-card__body">
-              <h2>Athlete Plan</h2>
-
-              <p>Best for fitness enthusiast who want to take their fitness to the next level.</p>
-
-              <ul>
-                <li>Body measurements tracking</li>
-                <li>Caloric intake tracking</li>
-                <li>Workout tracking</li>
-                <li>Water intake tracking</li>
-                <li>Exercise library</li>
-                <li>Workout library</li>
-                <li>Supplement tracking</li>
+                <li>Workouts library</li>
               </ul>
             </div>
 
@@ -89,11 +63,40 @@ const Pricing = () => (
         <div className="col">
           <div className="pricing-card">
             <div className="pricing-card__header">
+              <h2>$79<span className="price-label">per month</span></h2>
+            </div>
+
+            <div className="pricing-card__body">
+              <h2>Beast</h2>
+
+              <p>You are at the top. You do The Seven, Murph, Fran and Filthy 50 as a warmup.</p>
+
+              <ul>
+                <li>Body measurements tracking</li>
+                <li>Caloric intake tracking</li>
+                <li>Workout tracking</li>
+                <li>Water intake tracking</li>
+                <li>Daily WODs</li>
+                <li>Exercise library</li>
+                <li>Workouts library</li>
+                <li>Supplement tracking</li>
+              </ul>
+            </div>
+
+            <div className="pricing-card__footer">
+              <button>Start with Beast</button>
+            </div>
+          </div>
+        </div>
+
+        <div className="col">
+          <div className="pricing-card">
+            <div className="pricing-card__header">
               <h2>$99<span className="price-label">per month</span></h2>
             </div>
 
             <div className="pricing-card__body">
-              <h2>Coach Plan</h2>
+              <h2>Box</h2>
 
               <p>Best for coaches who want to register and work with trainees.</p>
 
@@ -102,10 +105,11 @@ const Pricing = () => (
                 <li>Caloric intake tracking</li>
                 <li>Workout tracking</li>
                 <li>Water intake tracking</li>
+                <li>Daily WODs</li>
                 <li>Exercise library</li>
-                <li>Workout library</li>
+                <li>Workouts library</li>
                 <li>Supplement tracking</li>
-                <li>Manage trainees</li>
+                <li>Register and manage trainees</li>
               </ul>
             </div>
 
