@@ -138,7 +138,7 @@ const Home = () => {
           font-family: Roboto, -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Helvetica, sans-serif;
           line-height: 1.618;
           letter-spacing: .4px;
-          color: ${colors.textDark};
+          color: ${colors.textText};
         }
 
         h1,
@@ -146,7 +146,7 @@ const Home = () => {
         h3,
         h4,
         h5 {
-          color: ${colors.textLight};
+          color: ${colors.textHeadings};
         }
       `}</style>
     </div>
