@@ -16,7 +16,7 @@ const Hero = () => (
             {/* Beginner or advanced, Trainr gives you with the tools and knowledge you need to crush CrossFit Leaderboard. */}
             {/* If you are a beginner Trainr will help you get started with CrossFit. If you are experienced athlete, Trainr will help you up your game. */}
 
-            <AnchorLink href="#pricing"><span className="hero__cta">Learn more</span></AnchorLink>
+            <AnchorLink offset="70%" href="#benefits"><span className="hero__cta">Learn more</span></AnchorLink>
           </div>
         </div>
 
