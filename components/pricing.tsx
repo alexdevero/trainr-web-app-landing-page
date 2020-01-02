@@ -4,14 +4,9 @@ import { colors } from './../constants/theme'
 
 interface PricingInterface {
   isBillingMonthly: boolean;
-  isModalVisible: boolean;
-  isSignUpMessageSuccessVisible: boolean;
-  isSignUpMessageErrorVisible: boolean;
   selectedPlan: string;
   setIsBillingMonthly: React.Dispatch<React.SetStateAction<boolean>>;
-  setIsModalVisible: React.Dispatch<React.SetStateAction<boolean>>;
   handlePlanSelect: (pricingPlan: 'starter' | 'athlete' | 'beast' | 'coach') => void;
-  handleSignUp: () => void;
 }
 
 const Pricing = (props: PricingInterface) => {
@@ -173,20 +168,6 @@ const Pricing = (props: PricingInterface) => {
             </div>
           </div>
         </div>
-
-        {props.isModalVisible && (
-          <div>
-            <div className="row">
-              <div className="col-md-6 col-lg-7">
-                <input type="email" />
-              </div>
-
-              <div className="col-md-6 col-lg-5">
-                <button onClick={props.handleSignUp}>Sign up</button>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
 
       <style jsx>{`
@@ -212,10 +193,18 @@ const Pricing = (props: PricingInterface) => {
           width: 100%;
         }
 
+        .col + .col {
+          margin-top: 32px;
+        }
+
         @media (min-width: 768px) {
           .col {
             flex: 0 0 50%;
             max-width: 50%;
+          }
+
+          .col + .col:nth-child(2) {
+            margin-top: 0;
           }
         }
 
@@ -223,6 +212,10 @@ const Pricing = (props: PricingInterface) => {
           .col {
             flex: 0 0 25%;
             max-width: 25%;
+          }
+
+          .col + .col {
+            margin-top: 0;
           }
         }
 
