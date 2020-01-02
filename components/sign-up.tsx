@@ -78,6 +78,7 @@ const SignUp = (props: SignUpInterface) => (
       }
 
       [class*=col-] {
+        position: relative;
         padding-right: 15px;
         padding-left: 15px;
         width: 100%;
