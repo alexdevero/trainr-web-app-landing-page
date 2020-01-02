@@ -87,11 +87,11 @@ const Pricing = (props: PricingInterface) => {
 
                 <ul className="pricing-card__list">
                   <li>Body measurements tracking</li>
-                  <li>Caloric intake tracking</li>
                   <li>Workout tracking</li>
-                  <li>Water intake tracking</li>
                   <li>Daily WODs</li>
                   <li>Workouts library</li>
+                  <li>Caloric intake tracking</li>
+                  <li>Water intake tracking</li>
                   <li className="pricing-feature--muted">Exercise library</li>
                   <li className="pricing-feature--muted">Custom workouts</li>
                   <li className="pricing-feature--muted">Supplement tracking</li>
@@ -110,7 +110,7 @@ const Pricing = (props: PricingInterface) => {
               <div className="pricing-card__header">
                 <h2 className="pricing-card__name">Beast</h2>
 
-                <p className="pricing-card__description">You are at the top. You do The Seven, Murph, Fran and Filthy 50 as a warmup.</p>
+                <p className="pricing-card__description">You want a real challenge. You do The Seven, Murph, Fran and Filthy 50 as a warmup.</p>
               </div>
 
               <div className="pricing-card__body">
@@ -121,12 +121,12 @@ const Pricing = (props: PricingInterface) => {
 
                 <ul className="pricing-card__list">
                   <li>Body measurements tracking</li>
-                  <li>Caloric intake tracking</li>
                   <li>Workout tracking</li>
-                  <li>Water intake tracking</li>
                   <li>Daily WODs</li>
-                  <li>Exercise library</li>
                   <li>Workouts library</li>
+                  <li>Caloric intake tracking</li>
+                  <li>Water intake tracking</li>
+                  <li>Exercise library</li>
                   <li>Custom workouts</li>
                   <li>Supplement tracking</li>
                   <li className="pricing-feature--muted">Register and manage trainees</li>
@@ -155,12 +155,12 @@ const Pricing = (props: PricingInterface) => {
 
                 <ul className="pricing-card__list">
                   <li>Body measurements tracking</li>
-                  <li>Caloric intake tracking</li>
                   <li>Workout tracking</li>
-                  <li>Water intake tracking</li>
                   <li>Daily WODs</li>
-                  <li>Exercise library</li>
                   <li>Workouts library</li>
+                  <li>Caloric intake tracking</li>
+                  <li>Water intake tracking</li>
+                  <li>Exercise library</li>
                   <li>Custom workouts</li>
                   <li>Supplement tracking</li>
                   <li>Register and manage trainees</li>
