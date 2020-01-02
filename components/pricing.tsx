@@ -13,7 +13,7 @@ const Pricing = (props: PricingInterface) => {
   return (
     <section id="pricing">
       <div className="container">
-        <h1>Pricing</h1>
+        <h1 className="h2">Pricing</h1>
 
         <div className="billing-switch__wrapper">
           <input type="checkbox" name="billingSwitch" id="billingSwitch" />
@@ -35,7 +35,7 @@ const Pricing = (props: PricingInterface) => {
           <div className="col">
             <div className={props.selectedPlan === 'starter' ? 'pricing-card pricing-card--selected' : 'pricing-card'}>
               <div className="pricing-card__header">
-                <h2 className="pricing-card__name">Starter</h2>
+                <h2 className="pricing-card__name h3">Starter</h2>
 
                 <p className="pricing-card__description">You are new to CrossFit, or want to get started.</p>
               </div>
@@ -69,7 +69,7 @@ const Pricing = (props: PricingInterface) => {
           <div className="col">
             <div className={props.selectedPlan === 'athlete' ? 'pricing-card pricing-card--selected' : 'pricing-card'}>
               <div className="pricing-card__header">
-                <h2 className="pricing-card__name">Athlete</h2>
+                <h2 className="pricing-card__name h3">Athlete</h2>
 
                 <p className="pricing-card__description">You are ready to take your game to the next level.</p>
               </div>
@@ -103,7 +103,7 @@ const Pricing = (props: PricingInterface) => {
           <div className="col">
             <div className={props.selectedPlan === 'beast' ? 'pricing-card pricing-card--selected' : 'pricing-card'}>
               <div className="pricing-card__header">
-                <h2 className="pricing-card__name">Beast</h2>
+                <h2 className="pricing-card__name h3">Beast</h2>
 
                 <p className="pricing-card__description">You want a real challenge. You do The Seven, Murph, Fran and Filthy 50 as a warmup.</p>
               </div>
@@ -137,7 +137,7 @@ const Pricing = (props: PricingInterface) => {
           <div className="col">
             <div className={props.selectedPlan === 'coach' ? 'pricing-card pricing-card--selected' : 'pricing-card'}>
               <div className="pricing-card__header">
-                <h2 className="pricing-card__name">Box</h2>
+                <h2 className="pricing-card__name h3">Box</h2>
 
                 <p className="pricing-card__description">Best for coaches who want to register and work with trainees.</p>
               </div>
