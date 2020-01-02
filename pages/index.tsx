@@ -148,6 +148,10 @@ const Home = () => {
         h5 {
           color: ${colors.textHeadings};
         }
+
+        button {
+          font-family: inherit;
+        }
       `}</style>
     </div>
   )
