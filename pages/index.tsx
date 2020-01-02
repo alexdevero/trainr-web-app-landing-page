@@ -17,21 +17,23 @@ import { colors } from '../constants/theme'
 
 const Home = () => {
   const [isBillingMonthly, setIsBillingMonthly] = React.useState(true)
-  const [isModalVisible, setIsModalVisible] = React.useState(false)
+  const [isSignUpVisible, setIsSignUpVisible] = React.useState(false)
   const [isSignUpMessageSuccessVisible, setIsSignUpMessageSuccessVisible] = React.useState(false)
   const [isSignUpMessageErrorVisible, setIsSignUpMessageErrorVisible] = React.useState(false)
   const [selectedPlan, setSelectedPlan] = React.useState('')
+  const [signUpEmail, setSignUpEmail] = React.useState('')
 
   const handlePlanSelect = (pricingPlan: 'starter' | 'athlete' | 'beast' | 'coach') => {
     console.log(pricingPlan)
     setSelectedPlan(pricingPlan)
-    setIsModalVisible(true)
+    setIsSignUpVisible(true)
   }
 
   const handleSignUp = () => {
     console.log('click')
-    setIsModalVisible(false)
-    if (false) {
+    // setIsSignUpVisible(false)
+
+    if (signUpEmail.length > 0) {
       setIsSignUpMessageSuccessVisible(true)
       setIsSignUpMessageErrorVisible(false)
     } else {
@@ -104,21 +106,25 @@ const Home = () => {
 
       <Pricing
         isBillingMonthly={isBillingMonthly}
-        isModalVisible={isModalVisible}
         selectedPlan={selectedPlan}
         setIsBillingMonthly={setIsBillingMonthly}
-        setIsModalVisible={setIsModalVisible}
-        isSignUpMessageSuccessVisible={isSignUpMessageSuccessVisible}
-        isSignUpMessageErrorVisible={isSignUpMessageErrorVisible}
         handlePlanSelect={handlePlanSelect}
-        handleSignUp={handleSignUp}
       />
+
+      {/* isSignUpVisible */ true && (
+        <SignUp
+          isSignUpMessageSuccessVisible={isSignUpMessageSuccessVisible}
+          isSignUpMessageErrorVisible={isSignUpMessageErrorVisible}
+          selectedPlan={selectedPlan}
+          signUpEmail={signUpEmail}
+          handleSignUpEmailChange={setSignUpEmail}
+          handleSignUp={handleSignUp}
+        />
+      )}
 
       <Testimonials />
 
       <FeaturedIn />
-
-      <SignUp />
 
       <Footer />
 
