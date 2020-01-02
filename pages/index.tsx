@@ -4,14 +4,14 @@ import Head from 'next/head'
 // Import components
 import Benefits from '../components/benefits'
 import Faq from '../components/faq'
-import FeaturedIn from '../components/featured-in'
+// import FeaturedIn from '../components/featured-in'
 import Footer from '../components/footer'
 import Hero from '../components/hero'
 import HowItWorks from '../components/how-it-works'
 import Nav from '../components/nav'
 import Pricing from '../components/pricing'
 import SignUp from '../components/sign-up'
-import Testimonials from '../components/testimonials'
+// import Testimonials from '../components/testimonials'
 
 import { colors } from '../constants/theme'
 
@@ -122,9 +122,9 @@ const Home = () => {
         />
       )}
 
-      <Testimonials />
+      {/* <Testimonials /> */}
 
-      <FeaturedIn />
+      {/* <FeaturedIn /> */}
 
       <Footer />
 
