@@ -172,11 +172,16 @@ const Home = () => {
 
         h4,
         .h4 {
-          font-size: 18px;
+          font-size: 21px;
         }
 
         h5,
         .h5 {
+          font-size: 18px;
+        }
+
+        h6,
+        .h6 {
           font-size: 16px;
         }
 
