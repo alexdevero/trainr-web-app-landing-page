@@ -11,7 +11,7 @@ interface PricingInterface {
 
 const Pricing = (props: PricingInterface) => {
   return (
-    <section id="pricing">
+    <section id="pricing" className="pricing">
       <div className="container">
         <h1 className="h2 text-center">Pricing</h1>
 
@@ -171,6 +171,11 @@ const Pricing = (props: PricingInterface) => {
       </div>
 
       <style jsx>{`
+        .pricing {
+          padding-top: 60px;
+          padding-bottom: 60px;
+        }
+
         .container {
           padding-right: 15px;
           padding-left: 15px;
