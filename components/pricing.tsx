@@ -20,7 +20,21 @@ const Pricing = (props: PricingInterface) => {
       <div className="container">
         <h1>Pricing</h1>
 
-        <div className="billing-switch">switch to <button className="billing-switch-link" onClick={() => props.setIsBillingMonthly(!props.isBillingMonthly)}>{props.isBillingMonthly ? 'yearly' : 'monthly'}</button></div>
+        <div className="billing-switch__wrapper">
+          <input type="checkbox" name="billingSwitch" id="billingSwitch" />
+
+          <label
+            className="billing-switch__label-el"
+            htmlFor="billingSwitch"
+            onClick={() => props.setIsBillingMonthly(!props.isBillingMonthly)}
+          >
+            <span className="billing-switch__label">Monthly</span>
+
+            <span className="billing-switch__switch" />
+
+            <span className="billing-switch__label">Yearly</span>
+          </label>
+        </div>
 
         <div className="row pricing-cards">
           <div className="col">
@@ -217,15 +231,53 @@ const Pricing = (props: PricingInterface) => {
           text-align: center;
         }
 
-        .billing-switch-link {
-          padding: 0;
-          font-size: 16px;
-          text-decoration: underline;
-          color: #222;
-          background: transparent;
-          border: 0;
+        .billing-switch__wrapper {
+          display: flex;
+          justify-content: center;
+        }
+
+        .billing-switch__wrapper input {
+          display: none;
+          visibility: hidden;
+        }
+
+        .billing-switch__label-el {
+          display: flex;
           cursor: pointer;
-          outline: 0;
+        }
+
+        .billing-switch__label {
+          font-size: 15px;
+        }
+
+        .billing-switch__switch {
+          display: block;
+          position: relative;
+          margin-right: 8px;
+          margin-left: 8px;
+          width: 54px;
+          height: 26px;
+          border-radius: 45px;
+          background: #fff;
+          border: 1px solid #067df7;
+          transition: background .25s ease-in-out;
+        }
+
+        .billing-switch__switch::before {
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          z-index: 2;
+          content: '';
+          width: 20px;
+          height: 20px;
+          background: #067df7;
+          border-radius: 50%;
+          transition: transform .25s ease-in-out;
+        }
+
+        [type=checkbox]:checked + label > .billing-switch__switch::before {
+          transform: translateX(28px);
         }
 
         .pricing-cards {
@@ -255,6 +307,7 @@ const Pricing = (props: PricingInterface) => {
 
         .pricing-card__description {
           margin-bottom: 0;
+          font-size: 15px;
         }
 
         .pricing-card__price {
@@ -262,7 +315,7 @@ const Pricing = (props: PricingInterface) => {
         }
 
         .pricing-card__price-amount {
-          font-size: 32px;
+          font-size: 40px;
         }
 
         .pricing-card__price-label {
@@ -284,11 +337,11 @@ const Pricing = (props: PricingInterface) => {
         }
 
         .pricing-card__list li + li {
-          margin-top: 12px;
+          margin-top: 10px;
         }
 
         .pricing-feature--muted {
-          color: rgba(0, 0, 0, .35);
+          opacity: .45;
         }
 
         .pricing-card__cta {
