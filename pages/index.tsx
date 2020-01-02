@@ -185,6 +185,10 @@ const Home = () => {
           font-size: 16px;
         }
 
+        .text-center {
+          text-align: center;
+        }
+
         button {
           font-family: inherit;
         }

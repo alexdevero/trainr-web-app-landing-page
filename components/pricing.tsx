@@ -13,7 +13,7 @@ const Pricing = (props: PricingInterface) => {
   return (
     <section id="pricing">
       <div className="container">
-        <h1 className="h2">Pricing</h1>
+        <h1 className="h2 text-center">Pricing</h1>
 
         <div className="billing-switch__wrapper">
           <input type="checkbox" name="billingSwitch" id="billingSwitch" />
@@ -217,11 +217,6 @@ const Pricing = (props: PricingInterface) => {
           .col + .col {
             margin-top: 0;
           }
-        }
-
-        h1,
-        .billing-switch {
-          text-align: center;
         }
 
         .billing-switch__wrapper {

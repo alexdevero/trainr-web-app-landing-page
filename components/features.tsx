@@ -3,9 +3,9 @@ import * as React from 'react'
 const Features = () => (
   <section id="features">
     <div className="container">
-      <h1 className="h2">Features/Benefits List</h1>
+      <h1 className="h2 text-center">Features/Benefits List</h1>
 
-      <h2>This is the Features/Benefits block. Write about your product or service.</h2>
+      <p className="text-center">This is the Features/Benefits block. Write about your product or service.</p>
 
       <div className="row">
         <div className="col-4">

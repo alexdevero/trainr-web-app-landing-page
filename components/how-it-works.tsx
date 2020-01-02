@@ -3,9 +3,9 @@ import * as React from 'react'
 const HowItWorks = () => (
   <section id="howItWorks">
     <div className="container">
-      <h1 className="h2">How it Works</h1>
+      <h1 className="h2 text-center">How it Works</h1>
 
-      <p>Explain how your product or service works. </p>
+      <p className="text-center">Explain how your product or service works. </p>
 
       <div className="row">
         <div className="col-2">

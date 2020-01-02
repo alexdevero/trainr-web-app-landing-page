@@ -3,9 +3,9 @@ import * as React from 'react'
 const Faq = () => (
   <section id="faq">
     <div className="container">
-      <h1 className="h2">FAQ</h1>
+      <h1 className="h2 text-center">FAQ</h1>
 
-      <p>Your frequently asked questions answered.</p>
+      <p className="text-center">Your frequently asked questions answered.</p>
 
       <h2></h2>
       <p></p>
