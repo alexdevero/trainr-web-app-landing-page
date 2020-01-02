@@ -14,7 +14,7 @@ interface SignUpInterface {
 const SignUp = (props: SignUpInterface) => (
   <section className="sign-up" id="signUp">
     <div className="container">
-      <h1>Sign up for early access to Trainr {props.selectedPlan.substring(0, 1).toUpperCase() + props.selectedPlan.substring(1)}</h1>
+      <h1 className="h2">Sign up for early access to Trainr {props.selectedPlan.substring(0, 1).toUpperCase() + props.selectedPlan.substring(1)}</h1>
 
       {props.selectedPlan.length === 0 && <p>Please select one of the training plans above first.</p>}
 
