@@ -67,7 +67,7 @@ const Pricing = (props: PricingInterface) => {
           </div>
 
           <div className="col">
-            <div className={props.selectedPlan === 'athlete' ? 'pricing-card pricing-card--selected' : 'pricing-card'}>
+            <div className={props.selectedPlan === 'athlete' ? 'pricing-card pricing-card--favorite pricing-card--selected' : 'pricing-card pricing-card--favorite'}>
               <div className="pricing-card__header">
                 <h2 className="pricing-card__name h3">Athlete</h2>
 
@@ -278,6 +278,23 @@ const Pricing = (props: PricingInterface) => {
           border-radius: 4px;
         }
 
+        .pricing-card--favorite {
+          padding: 0 0 16px;
+        }
+
+        .pricing-card--favorite .pricing-card__name {
+          padding-top: 16px;
+          padding-right: 16px;
+          padding-left: 16px;
+          background: #f4f5f7;
+        }
+
+        .pricing-card--favorite .pricing-card__description,
+        .pricing-card--favorite .pricing-card__body {
+          padding-right: 16px;
+          padding-left: 16px;
+        }
+
         .pricing-card--selected {
           border: 2px solid ${colors.primary};
         }
@@ -294,6 +311,7 @@ const Pricing = (props: PricingInterface) => {
         }
 
         .pricing-card__description {
+          margin-top: 16px;
           margin-bottom: 0;
           font-size: 15px;
         }
@@ -312,6 +330,7 @@ const Pricing = (props: PricingInterface) => {
 
         .pricing-card__name {
           margin: 0;
+          padding-bottom: 16px;
         }
 
         .pricing-card__list {
