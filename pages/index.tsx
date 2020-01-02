@@ -155,6 +155,36 @@ const Home = () => {
           color: ${colors.textHeadings};
         }
 
+        h1,
+        .h1 {
+          font-size: 48px;
+        }
+
+        h2,
+        .h2 {
+          font-size: 36px;
+        }
+
+        h3,
+        .h3 {
+          font-size: 24px;
+        }
+
+        h4,
+        .h4 {
+          font-size: 18px;
+        }
+
+        h5,
+        .h5 {
+          font-size: 16px;
+        }
+
+        p,
+        .p {
+          font-size: 16px;
+        }
+
         button {
           font-family: inherit;
         }
