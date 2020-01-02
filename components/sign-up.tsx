@@ -20,22 +20,24 @@ const SignUp = (props: SignUpInterface) => (
 
       <div className="row">
         <div className="col-md-10 col-lg-8">
-          <div className="row">
-            <div className="col-sm-7 col-input">
-              <input
-                className="sign-up__input"
-                type="email"
-                defaultValue={props.signUpEmail}
-                placeholder="Your email address"
-                onChange={(event) => props.handleSignUpEmailChange(event.target.value)}
-                required
-              />
-            </div>
+          <form action="">
+            <div className="row">
+                <div className="col-sm-7 col-input">
+                  <input
+                    className="sign-up__input"
+                    type="email"
+                    defaultValue={props.signUpEmail}
+                    placeholder="Your email address"
+                    onChange={(event) => props.handleSignUpEmailChange(event.target.value)}
+                    required
+                  />
+                </div>
 
-            <div className="col-sm-5 col-button">
-              <button className="sign-up__button" onClick={props.handleSignUp}>Sign up</button>
+                <div className="col-sm-5 col-button">
+                  <button className="sign-up__button" onClick={props.handleSignUp}>Sign up</button>
+                </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
@@ -113,6 +115,10 @@ const SignUp = (props: SignUpInterface) => (
           flex: 0 0 66.666667%;
           max-width: 66.666667%;
         }
+      }
+
+      form {
+        width: 100%;
       }
 
       .sign-up__input {
