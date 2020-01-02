@@ -13,6 +13,8 @@ import Pricing from '../components/pricing'
 import SignUp from '../components/sign-up'
 import Testimonials from '../components/testimonials'
 
+import { colors } from '../constants/theme'
+
 const Home = () => {
   const [isBillingMonthly, setIsBillingMonthly] = React.useState(true)
   const [isModalVisible, setIsModalVisible] = React.useState(false)
@@ -85,6 +87,9 @@ const Home = () => {
 
         {/* Disable automatic detection and formatting of possible phone numbers */}
         <meta name="format-detection" content="telephone=no" />
+
+        {/* Fonts */}
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap&subset=latin-ext" rel="stylesheet" />
       </Head>
 
       <Nav />
@@ -130,7 +135,18 @@ const Home = () => {
 
         body {
           margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Helvetica, sans-serif;
+          font-family: Roboto, -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Helvetica, sans-serif;
+          line-height: 1.618;
+          letter-spacing: .4px;
+          color: ${colors.textDark};
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+          color: ${colors.textLight};
         }
       `}</style>
     </div>
