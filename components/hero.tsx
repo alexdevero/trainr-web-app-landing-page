@@ -92,13 +92,12 @@ const Hero = () => (
 
       .hero__content {
         text-align: center;
-        color: #fff;
       }
-
 
       .hero__title,
       .hero__subtitle {
         margin-top: 0;
+        color: #fff;
       }
 
       .hero__title {
