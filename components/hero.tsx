@@ -1,5 +1,6 @@
 import * as React from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { ReactSVG } from 'react-svg'
 
 import { colors } from '../constants/theme'
 
@@ -7,22 +8,28 @@ const Hero = () => (
   <section className="hero">
     <div className="container">
       <div className="row">
-        <div className="col-8">
+        <div className="col-6">
           <div className="hero__content">
             <h1 className="hero__title">Train harder and smarter</h1>
             {/* Take your performance to the next level */}
 
-            <h2 className="hero__subtitle">Trainr helps you plan, track and sustain your training progress.</h2>
+            <h2 className="hero__subtitle">Trainr helps you plan, track, improve and sustain your training progress.</h2>
             {/* Beginner or advanced, Trainr gives you with the tools and knowledge you need to crush CrossFit Leaderboard. */}
             {/* If you are a beginner Trainr will help you get started with CrossFit. If you are experienced athlete, Trainr will help you up your game. */}
 
-            <AnchorLink offset="70%" href="#benefits"><span className="hero__cta">Learn more</span></AnchorLink>
+            <AnchorLink offset="70%" href="#intro"><span className="hero__cta">Learn more</span></AnchorLink>
           </div>
         </div>
 
-        {/* <div className="col-6">
-          <img src="" alt=""/>
-        </div> */}
+        <div className="col-6">
+          <ReactSVG
+            src="/images/illustrations/man-flipping-tire--no-background.svg"
+            beforeInjection={svg => {
+              svg.classList.add('hero__illustration')
+              svg.setAttribute('style', 'width: 100%; max-width: 520px; height: auto;')
+            }}
+          />
+        </div>
       </div>
     </div>
 
@@ -39,15 +46,14 @@ const Hero = () => (
         align-items: center;
         min-height: 880px;
         max-height: 100vh;
-        overflow: hidden;
-        object-fit: cover;
+        /* object-fit: cover;
         background-image: url('/images/hero-barbell-1.jpg');
         background-repeat: no-repeat;
         background-position: center;
-        background-attachment: fixed;
+        background-attachment: fixed; */
       }
 
-      .hero::before {
+      /* .hero::before {
         position: absolute;
         top: 0;
         left: 0;
@@ -56,7 +62,7 @@ const Hero = () => (
         width: 100%;
         height: 100%;
         background: rgba(0,0,0,.75);
-      }
+      } */
 
       .row {
         justify-content: center;
@@ -78,14 +84,14 @@ const Hero = () => (
         max-width: 66.666667%;
       }
 
-      .hero__content {
+      /* .hero__content {
         text-align: center;
-      }
+      } */
 
       .hero__title,
       .hero__subtitle {
         margin-top: 0;
-        color: #fff;
+        /* color: #fff; */
       }
 
       .hero__title {
@@ -98,7 +104,7 @@ const Hero = () => (
       .hero__subtitle {
         margin-bottom: 32px;
         font-size: 32px;
-        font-weight: 100;
+        font-weight: 300;
       }
 
       .hero__cta {
