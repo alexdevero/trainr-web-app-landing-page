@@ -73,7 +73,7 @@ const SignUp = (props: SignUpInterface) => (
         width: 100%;
       }
 
-      @media (min-width: 555px) {
+      @media (min-width: 576px) {
         .col-sm-5 {
           flex: 0 0 20%;
           max-width: 20%;
@@ -120,7 +120,7 @@ const SignUp = (props: SignUpInterface) => (
         border-radius: 4px;
       }
 
-      @media (min-width: 555px) {
+      @media (min-width: 576px) {
         .sign-up__input {
           border-radius: 4px 0 0 4px;
         }
@@ -147,7 +147,7 @@ const SignUp = (props: SignUpInterface) => (
         cursor: pointer;
       }
 
-      @media (min-width: 555px) {
+      @media (min-width: 576px) {
         .sign-up__button {
           margin-top: 0;
           border-radius: 0 4px 4px 0;
