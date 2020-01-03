@@ -11,10 +11,11 @@ const Benefits = () => (
       <div className="row">
         <div className="col">
           <ReactSVG
-            src="/images/features-icons/icon-tracking.svg"
+            // src="/images/features-icons/icon-tracking.svg"
+            src="/images/features-icons/icon-flat-bars-chart.svg"
             beforeInjection={svg => {
               svg.classList.add('benefits__icon')
-              svg.setAttribute('style', 'width: 60px; height: auto; fill: #067df7;')
+              svg.setAttribute('style', 'width: 60px; height: auto; /* fill: #067df7; */')
             }}
           />
 
@@ -25,10 +26,11 @@ const Benefits = () => (
 
         <div className="col">
           <ReactSVG
-            src="/images/features-icons/icon-workout.svg"
+            // src="/images/features-icons/icon-workout.svg"
+            src="/images/features-icons/icon-flat-notepad.svg"
             beforeInjection={svg => {
               svg.classList.add('benefits__icon')
-              svg.setAttribute('style', 'width: 60px; height: auto; fill: #067df7;')
+              svg.setAttribute('style', 'width: 60px; height: auto; /* fill: #067df7; */')
             }}
           />
 
@@ -39,10 +41,11 @@ const Benefits = () => (
 
         <div className="col">
           <ReactSVG
-            src="/images/features-icons/icon-leaderboard.svg"
+            // src="/images/features-icons/icon-leaderboard.svg"
+            src="/images/features-icons/icon-flat-trophy.svg"
             beforeInjection={svg => {
               svg.classList.add('benefits__icon')
-              svg.setAttribute('style', 'width: 60px; height: auto; fill: #067df7;')
+              svg.setAttribute('style', 'width: 60px; height: auto; /* fill: #067df7; */')
             }}
           />
 
@@ -53,10 +56,11 @@ const Benefits = () => (
 
         <div className="col">
           <ReactSVG
-            src="/images/features-icons/icon-wods.svg"
+            // src="/images/features-icons/icon-wods.svg"
+            src="/images/features-icons/icon-flat-timer.svg"
             beforeInjection={svg => {
               svg.classList.add('benefits__icon')
-              svg.setAttribute('style', 'width: 60px; height: auto; fill: #067df7;')
+              svg.setAttribute('style', 'width: 60px; height: auto; /* fill: #067df7; */')
             }}
           />
 
@@ -67,10 +71,11 @@ const Benefits = () => (
 
         <div className="col">
           <ReactSVG
-            src="/images/features-icons/icon-exercise-library.svg"
+            // src="/images/features-icons/icon-exercise-library.svg"
+            src="/images/features-icons/icon-flat-weight.svg"
             beforeInjection={svg => {
               svg.classList.add('benefits__icon')
-              svg.setAttribute('style', 'width: 60px; height: auto; fill: #067df7;')
+              svg.setAttribute('style', 'width: 60px; height: auto; /* fill: #067df7; */')
             }}
           />
 
@@ -81,10 +86,11 @@ const Benefits = () => (
 
         <div className="col">
           <ReactSVG
-            src="/images/features-icons/icon-fit.svg"
+            // src="/images/features-icons/icon-fit.svg"
+            src="/images/features-icons/icon-flat-biceps.svg"
             beforeInjection={svg => {
               svg.classList.add('benefits__icon')
-              svg.setAttribute('style', 'width: 60px; height: auto; fill: #067df7;')
+              svg.setAttribute('style', 'width: 60px; height: auto; /* fill: #067df7; */')
             }}
           />
 
