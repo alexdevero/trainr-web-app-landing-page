@@ -4,7 +4,7 @@ import { ReactSVG } from 'react-svg'
 const Benefits = () => (
   <section id="benefits" className="benefits">
     <div className="container text-center">
-      {/* <h1 className="h2">Features/Benefits List</h1> */}
+      <h1 className="h2">Why Trainr</h1>
 
       {/* <p>This is the Features/Benefits block. Write about your product or service.</p> */}
 
