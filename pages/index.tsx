@@ -8,6 +8,7 @@ import Faq from '../components/faq'
 import Footer from '../components/footer'
 import Hero from '../components/hero'
 import HowItWorks from '../components/how-it-works'
+import Intro from '../components/intro'
 import Nav from '../components/nav'
 import Pricing from '../components/pricing'
 import SignUp from '../components/sign-up'
@@ -97,6 +98,8 @@ const Home = () => {
       <Nav />
 
       <Hero />
+
+      <Intro />
 
       <Benefits />
 
@@ -196,6 +199,22 @@ const Home = () => {
 
         button {
           font-family: inherit;
+        }
+
+        /* Re-usable parts of grid */
+        .container {
+          padding-right: 15px;
+          padding-left: 15px;
+          margin-right: auto;
+          margin-left: auto;
+          max-width: 1140px;
+        }
+
+        .row {
+          display: flex;
+          flex-wrap: wrap;
+          margin-right: -15px;
+          margin-left: -15px;
         }
       `}</style>
     </div>
