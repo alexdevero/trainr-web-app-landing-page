@@ -58,20 +58,8 @@ const Hero = () => (
         background: rgba(0,0,0,.75);
       }
 
-      .container {
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 1140px;
-      }
-
       .row {
-        display: flex;
         justify-content: center;
-        flex-wrap: wrap;
-        margin-right: -15px;
-        margin-left: -15px;
       }
 
       [class*=col-] {

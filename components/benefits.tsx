@@ -101,22 +101,6 @@ const Benefits = () => (
         padding-bottom: 60px;
       }
 
-      .container {
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 1140px;
-      }
-
-      .row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-right: -15px;
-        margin-left: -15px;
-      }
-
       .col {
         position: relative;
         padding-right: 15px;

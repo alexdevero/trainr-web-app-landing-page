@@ -173,22 +173,7 @@ const Pricing = (props: PricingInterface) => {
       <style jsx>{`
         .pricing {
           padding-top: 60px;
-          padding-bottom: 60px;
-        }
-
-        .container {
-          padding-right: 15px;
-          padding-left: 15px;
-          margin-right: auto;
-          margin-left: auto;
-          max-width: 1140px;
-        }
-
-        .row {
-          display: flex;
-          flex-wrap: wrap;
-          margin-right: -15px;
-          margin-left: -15px;
+          padding-bottom: 20px;
         }
 
         .col {
@@ -274,7 +259,7 @@ const Pricing = (props: PricingInterface) => {
         }
 
         .pricing-cards {
-          margin-top: 21px;
+          margin-top: 32px;
         }
 
         .pricing-card {
