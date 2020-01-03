@@ -154,8 +154,10 @@ const Home = () => {
         h2,
         h3,
         h4,
-        h5 {
+        h5,
+        h6 {
           color: ${colors.textHeadings};
+          line-height: 1.212;
         }
 
         h1,
