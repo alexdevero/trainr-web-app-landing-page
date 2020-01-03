@@ -16,7 +16,9 @@ const SignUp = (props: SignUpInterface) => (
     <div className="container">
       <h1 className="h2">Sign up for early access to Trainr {props.selectedPlan.substring(0, 1).toUpperCase() + props.selectedPlan.substring(1)}</h1>
 
-      {props.selectedPlan.length === 0 && <p>Please select one of the training plans above first.</p>}
+      <p>Train smarter, better, harder, reach your peak performance and have fun.</p>
+
+      {props.selectedPlan.length === 0 && <p className="sign-up__warning">Please select one of the training plans above before signing up.</p>}
 
       <div className="row">
         <div className="col-md-10 col-lg-8">
@@ -105,6 +107,10 @@ const SignUp = (props: SignUpInterface) => (
           flex: 0 0 66.666667%;
           max-width: 66.666667%;
         }
+      }
+
+      .sign-up__warning {
+        color: ${colors.red};
       }
 
       form {
