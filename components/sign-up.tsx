@@ -44,7 +44,8 @@ const SignUp = (props: SignUpInterface) => (
 
     <style jsx>{`
       .sign-up {
-        padding-top: 64px;
+        padding-top: 60px;
+        padding-bottom: 60px;
       }
 
       .container {
