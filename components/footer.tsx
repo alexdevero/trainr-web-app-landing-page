@@ -24,14 +24,6 @@ const Footer = () => (
         background: #222;
       }
 
-      .container {
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 1140px;
-      }
-
       ul {
         display: flex;
         justify-content: center;

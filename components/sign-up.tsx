@@ -48,14 +48,6 @@ const SignUp = (props: SignUpInterface) => (
         padding-bottom: 60px;
       }
 
-      .container {
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 1140px;
-      }
-
       h1,
       p {
         margin-top: 0;
@@ -71,11 +63,7 @@ const SignUp = (props: SignUpInterface) => (
       }
 
       .sign-up .row {
-        display: flex;
-        flex-wrap: wrap;
         justify-content: center;
-        margin-right: -15px;
-        margin-left: -15px;
       }
 
       [class*=col-] {
