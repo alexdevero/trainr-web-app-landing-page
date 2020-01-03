@@ -1,5 +1,8 @@
 import * as React from 'react'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { ReactSVG } from 'react-svg'
+
+import { colors } from '../constants/theme'
 
 const Benefits = () => (
   <section id="benefits" className="benefits">
@@ -99,6 +102,10 @@ const Benefits = () => (
           <p>Have fun while getting fit, pushing your body and mind to their limits.</p>
         </div>
       </div>
+
+      <div className="row-cta">
+        <AnchorLink href="#signUp"><span className="benefits__cta">Sign up</span></AnchorLink>
+      </div>
     </div>
 
     <style jsx>{`
@@ -142,6 +149,24 @@ const Benefits = () => (
 
       .benefit__icon svg {
         max-width: 60px;
+      }
+
+      .row-cta {
+        padding-top: 18px;
+      }
+
+      .benefits__cta {
+        display: inline-block;
+        padding: 12px 28px;
+        margin: 28px auto 0;
+        font-size: 16px;
+        font-weight: 700;
+        text-decoration: none;
+        color: ${colors.white};
+        background: ${colors.primary};
+        border: 0;
+        border-radius: 4px;
+        cursor: pointer;
       }
     `}</style>
   </section>
