@@ -3,11 +3,13 @@ import * as React from 'react'
 import { colors } from '../constants/theme'
 
 interface SignUpInterface {
+  isEmailMessageErrorVisible: boolean;
+  isSelectPlanMessageVisible: boolean;
   isSignUpMessageSuccessVisible: boolean;
   isSignUpMessageErrorVisible: boolean;
   selectedPlan: string;
   signUpEmail: string;
-  handleSignUp: () => void;
+  handleSignUp: (event: React.FormEvent<Element>) => void;
   handleSignUpEmailChange: React.Dispatch<React.SetStateAction<string>>;
 }
 
@@ -18,7 +20,7 @@ const SignUp = (props: SignUpInterface) => (
 
       <p>Train smarter, better, harder, reach your peak performance and have fun.</p>
 
-      {props.selectedPlan.length === 0 && <p className="sign-up__warning">Please select one of the training plans above before signing up.</p>}
+      {props.isSelectPlanMessageVisible && <p className="sign-up__warning">Please select one of the training plans above before signing up.</p>}
 
       <div className="row">
         <div className="col-md-10 col-lg-8">
@@ -26,7 +28,7 @@ const SignUp = (props: SignUpInterface) => (
             <div className="row">
                 <div className="col-sm-7 col-input">
                   <input
-                    className="sign-up__input"
+                    className={props.isSignUpMessageErrorVisible ? 'sign-up__input sign-up__input--error' : 'sign-up__input'}
                     type="email"
                     defaultValue={props.signUpEmail}
                     placeholder="Your email address"
@@ -39,6 +41,8 @@ const SignUp = (props: SignUpInterface) => (
                   <button className="sign-up__button" onClick={props.handleSignUp}>Sign up</button>
                 </div>
             </div>
+
+            {props.isEmailMessageErrorVisible && <p className="error-message"><small>Please fill in your email.</small></p>}
           </form>
         </div>
       </div>
@@ -123,7 +127,12 @@ const SignUp = (props: SignUpInterface) => (
         min-height: 40px;
         height: 100%;
         border: 2px solid ${colors.gray};
+        border-right: 0;
         border-radius: 4px;
+      }
+
+      .sign-up__input--error {
+        border-color: ${colors.red};
       }
 
       @media (min-width: 576px) {
@@ -158,6 +167,13 @@ const SignUp = (props: SignUpInterface) => (
           margin-top: 0;
           border-radius: 0 4px 4px 0;
         }
+      }
+
+      .error-message {
+        margin-top: 8px;
+        margin-bottom: 0;
+        font-weight: 700;
+        color: ${colors.red};
       }
     `}</style>
   </section>
