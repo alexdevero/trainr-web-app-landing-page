@@ -19,26 +19,41 @@ import { colors } from '../constants/theme'
 
 const Home = () => {
   const [isBillingMonthly, setIsBillingMonthly] = React.useState(true)
-  const [isSignUpVisible, setIsSignUpVisible] = React.useState(false)
+  // const [isSignUpVisible, setIsSignUpVisible] = React.useState(false)
   const [isSignUpMessageSuccessVisible, setIsSignUpMessageSuccessVisible] = React.useState(false)
   const [isSignUpMessageErrorVisible, setIsSignUpMessageErrorVisible] = React.useState(false)
+  const [isEmailMessageErrorVisible, setIsEmailMessageErrorVisible] = React.useState(false)
   const [selectedPlan, setSelectedPlan] = React.useState('')
+  const [isSelectPlanMessageVisible, setIsSelectPlanMessageVisible] = React.useState(false)
   const [signUpEmail, setSignUpEmail] = React.useState('')
 
   const handlePlanSelect = (pricingPlan: 'starter' | 'athlete' | 'beast' | 'coach') => {
     console.log(pricingPlan)
     setSelectedPlan(pricingPlan)
-    setIsSignUpVisible(true)
+    setIsSelectPlanMessageVisible(false)
+    // setIsSignUpVisible(true)
   }
 
-  const handleSignUp = () => {
+  const handleSignUp = (event: React.FormEvent) => {
+    event.preventDefault()
+
     console.log('click')
     // setIsSignUpVisible(false)
+    if (selectedPlan === '') {
+      setIsSelectPlanMessageVisible(true)
+      return
+    }
 
     if (signUpEmail.length > 0) {
+      setIsEmailMessageErrorVisible(false)
+
+      // Some form processing
       setIsSignUpMessageSuccessVisible(true)
       setIsSignUpMessageErrorVisible(false)
     } else {
+      setIsEmailMessageErrorVisible(true)
+
+      // Some form processing
       setIsSignUpMessageErrorVisible(true)
       setIsSignUpMessageSuccessVisible(false)
     }
@@ -117,6 +132,8 @@ const Home = () => {
 
       {/* isSignUpVisible */ true && (
         <SignUp
+          isEmailMessageErrorVisible={isEmailMessageErrorVisible}
+          isSelectPlanMessageVisible={isSelectPlanMessageVisible}
           isSignUpMessageSuccessVisible={isSignUpMessageSuccessVisible}
           isSignUpMessageErrorVisible={isSignUpMessageErrorVisible}
           selectedPlan={selectedPlan}
