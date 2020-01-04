@@ -7,11 +7,12 @@ import Faq from '../components/faq'
 // import FeaturedIn from '../components/featured-in'
 import Footer from '../components/footer'
 import Hero from '../components/hero'
-import HowItWorks from '../components/how-it-works'
+// import HowItWorks from '../components/how-it-works'
 import Intro from '../components/intro'
 import Nav from '../components/nav'
 import Pricing from '../components/pricing'
 import SignUp from '../components/sign-up'
+import SplitScreens from '../components/split-screens'
 // import Testimonials from '../components/testimonials'
 
 import { colors } from '../constants/theme'
@@ -101,11 +102,11 @@ const Home = () => {
 
       <Intro />
 
+      <SplitScreens />
+
       <Benefits />
 
-      <HowItWorks />
-
-      <Faq />
+      {/* <HowItWorks /> */}
 
       <Pricing
         isBillingMonthly={isBillingMonthly}
@@ -124,6 +125,8 @@ const Home = () => {
           handleSignUp={handleSignUp}
         />
       )}
+
+      <Faq />
 
       {/* <Testimonials /> */}
 
