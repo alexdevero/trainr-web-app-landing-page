@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 // Import components
 import Benefits from '../components/benefits'
-import Faq from '../components/faq'
+// import Faq from '../components/faq'
 // import FeaturedIn from '../components/featured-in'
 import Footer from '../components/footer'
 import Hero from '../components/hero'
@@ -126,7 +126,7 @@ const Home = () => {
         />
       )}
 
-      <Faq />
+      {/* <Faq /> */}
 
       {/* <Testimonials /> */}
 
