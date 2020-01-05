@@ -33,15 +33,15 @@ const SplitScreens = () => (
 
       <div className="row split__row">
         <div className="col-md-6">
+          <img className="split__image" src="/images/trainr-app-snapshots/trainr--measurements.png" alt="" />
+        </div>
+
+        <div className="col-md-6">
           <h2 className="h4">Get fit and have fun</h2>
 
           <p>Whether you're a beginner, intermediate, or advanced, Trainr makes it easy to start with CrossFit and get fit. Most importantly, Trainr makes it easier to stay that way.</p>
 
           <p>Make Trainr your personal trainer, get better, faster and stronger, and achieve all your fitness and health goals.</p>
-        </div>
-
-        <div className="col-md-6">
-          <img className="split__image" src="/images/trainr-app-snapshots/trainr--measurements.png" alt="" />
         </div>
       </div>
     </div>
