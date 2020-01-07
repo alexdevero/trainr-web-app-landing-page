@@ -44,7 +44,7 @@ const Hero = () => (
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 880px;
+        min-height: 760px;
         max-height: 100vh;
         /* object-fit: cover;
         background-image: url('/images/hero-barbell-1.jpg');
