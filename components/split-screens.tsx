@@ -9,7 +9,7 @@ const SplitScreens = () => (
         </div>
 
         <div className="col-md-6">
-          <h2 className="h4">Track & measure what matters</h2>
+          <h2 className="h4">Track & measure what you need</h2>
 
           <p>Trainr helps you track everything, from your workouts and PRs to your weight, calories, water intake, supplements, and body measurements. You can also add your own custom trackers.</p>
 
@@ -90,6 +90,10 @@ const SplitScreens = () => (
 
       h2 {
         margin-top: 0;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
       }
     `}</style>
   </section>
