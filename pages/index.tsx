@@ -5,6 +5,7 @@ import Head from 'next/head'
 import Benefits from '../components/benefits'
 // import Faq from '../components/faq'
 // import FeaturedIn from '../components/featured-in'
+import Features from '../components/features'
 import Footer from '../components/footer'
 import Hero from '../components/hero'
 // import HowItWorks from '../components/how-it-works'
@@ -114,6 +115,8 @@ const Home = () => {
       <Nav />
 
       <Hero />
+
+      <Features />
 
       <Intro />
 
