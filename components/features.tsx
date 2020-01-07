@@ -55,7 +55,6 @@ const Features = () => (
 
     <style jsx>{`
       .features {
-        padding-top: 60px;
         padding-bottom: 60px;
       }
 
