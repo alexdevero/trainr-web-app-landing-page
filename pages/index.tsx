@@ -39,7 +39,6 @@ const Home = () => {
   const handleSignUp = (event: React.FormEvent) => {
     event.preventDefault()
 
-    console.log('click')
     // setIsSignUpVisible(false)
     if (selectedPlan === '') {
       setIsSelectPlanMessageVisible(true)
@@ -49,12 +48,11 @@ const Home = () => {
     if (signUpEmail.length > 0) {
       setIsEmailMessageErrorVisible(false)
 
-      const formData = {
-        plan: selectedPlan,
-        email: signUpEmail
-      }
+      const formData = new FormData()
+      formData.append('plan', `${selectedPlan}`)
+      formData.append('email', `${signUpEmail}`)
 
-      axios.post('./../public/signup.php', formData)
+      axios.post('./../signup.php', formData)
         .then(res => {
           console.log(res.data)
 
