@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Head from 'next/head'
+import axios from 'axios'
 
 // Import components
 import Benefits from '../components/benefits'
@@ -48,15 +49,24 @@ const Home = () => {
     if (signUpEmail.length > 0) {
       setIsEmailMessageErrorVisible(false)
 
-      // Some form processing
-      setIsSignUpMessageSuccessVisible(true)
-      setIsSignUpMessageErrorVisible(false)
+      const formData = {
+        plan: selectedPlan,
+        email: signUpEmail
+      }
+
+      axios.post('./../public/signup.php', formData)
+        .then(res => {
+          console.log(res.data)
+
+          setIsSignUpMessageSuccessVisible(true)
+          setIsSignUpMessageErrorVisible(false)
+        }).catch(err => {
+          console.log('error: ', err)
+          setIsSignUpMessageErrorVisible(true)
+          setIsSignUpMessageSuccessVisible(false)
+        })
     } else {
       setIsEmailMessageErrorVisible(true)
-
-      // Some form processing
-      setIsSignUpMessageErrorVisible(true)
-      setIsSignUpMessageSuccessVisible(false)
     }
   }
 
