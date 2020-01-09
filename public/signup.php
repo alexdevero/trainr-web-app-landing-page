@@ -6,12 +6,11 @@
       $myEmail = fgets($envFile);
 
       // Get the form fields and remove whitespace.
-      $plan = strip_tags(trim($_POST["plan"]));
-      $plan = str_replace(array("\r","\n"),array(" "," "),$plan);
+      $plan = trim($_POST["plan"]);
       $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
 
       // Check that data was sent to the mailer.
-      if ( empty($plan) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      if ( empty($plan) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         // Set a 400 (bad request) response code and exit.
         //http_response_code(400);
         echo "There was a problem with sending your inquiry. Please complete the form and try again.";
