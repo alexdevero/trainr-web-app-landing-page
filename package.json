@@ -23,6 +23,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "ship": "npm run build && npm run export",
     "start": "next dev",
     "start:server": "next start"
